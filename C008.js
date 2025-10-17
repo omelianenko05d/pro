@@ -1,31 +1,28 @@
-let a = Number(prompt("Zadej cislo, 1"));
-let b = Number(prompt("Zadej cislo, 2"));
 
-function funkce(a, b){
-    let scitat = a + b;
-    return scitat;
+
+function scitat(a, b){
+    return a + b;
 }
 
-funkce(a, b);
 
-function minus(a, b){
-    let odcitat = a - b;
-    return odcitat;
+function odcitat(a, b){
+    return a - b;
 }
 
-minus(a, b);
 
-function deleno(a, b){
-    let delit = a / b;
-    return delit;
+function nasobit(a, b){
+    return a * b;
 }
 
-deleno(a, b);
-
-function mnozit(a, b){
-    let soucin = a * b;
-    return soucin;
+function delit(a, b){
+    return a / b;
 }
 
-mnozit(a, b);
-console.log("Vysledek operace je:" + prompt);
+
+let prvny = Number(prompt("Zadej prvni cislo"));
+let druhy = Number(prompt("Zadej druhe cislo"));
+
+console.log("Vysledek operace je: " + scitat(prvny, druhy));
+console.log("Vysledek operace je: " + odcitat(prvny, druhy));
+console.log("Vysledek operace je: " + nasobit(prvny, druhy));
+console.log("Vysledek operace je: " + delit(prvny, druhy));
