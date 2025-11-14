@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="nadpis">Rosambo</h1>
+    <p id="odstavec4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum perferendis vel, quod veniam corporis
+     minus optio voluptatibus, inventore nesciunt quasi recusandae ad omnis necessitatibus ab autem iure odit velit totam.</p>
+
+    <p id="odstavec2">pomocny text</p>
+
+    <p id="odstavec3">treti odstavec</p>
+
+    <script>
+        let text1 = document.getElementById("nadpis").innerText;
+        let text2 = document.getElementById("odstavec2").innerText;
+        document.getElementById("odstavec2").innerText = text1;
+        document.getElementById("nadpis").innerText = text2;
+
+        let text3 = document.getElementById("odstavec1").innerText;
+        document.getElementById("odstavec3").innerText = text3;
+        let text4 = document.getElementById("odstavec4").innerText;
+        document.getElementById("odstavec3").innerText = text4;
+
+        document.getElementById("odstavec4").style.color(#c1c1c1);
+    </script>
+</body>
+</html>

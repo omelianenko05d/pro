@@ -1,0 +1,31 @@
+<!--vytvorte v html jeden nadpis 1h s vlastnim textem a dva odstavce pomoci js necte pri kliknuti
+na nadpis ymenit jeho barvy na cervenou
+
+po kliknuti prochozeni texte mezi 1 a 2-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="B" onclick="spustit()">Vlastni text</h1>
+    <p id="odstavec1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis, pariatur fugiat reiciendis adipisci fugit
+    sequi quibusdam corporis voluptatem, voluptas nemo harum rerum placeat, beatae molestias quam vel illum labore rem. 1</p>
+    <p id="odstavec2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis, pariatur fugiat reiciendis adipisci fugit
+    sequi quibusdam corporis voluptatem, voluptas nemo harum rerum placeat, beatae molestias quam vel illum labore rem. 2</p>
+
+    <script>
+       function spustit(){
+        let text1 = document.getElementById("odstavec1").innerText;
+        let text2 = document.getElementById("odstavec2").innerText;
+        document.getElementById("odstavec2").innerText = text1;
+        document.getElementById("odstavec1").innerText = text2;
+
+        document.getElementById("B").style.color="red";
+       }
+    </script>
+</body>
+</html>

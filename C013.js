@@ -6,4 +6,4 @@ let vek = prompt("Kolik Vam je let?");
 function neco(a){
     console.log("me jmeno je bruno, jsem z rakouska" + a +"let");
 }
-neco(vek);
+neco(vek); //vezme promennu vek a nassdi ji do funkce jako argument

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulace s Atributy</title>
+</head>
+<body>
+    <h1>Vysledna hodnoty value je: </h1>
+    <p id="cislo">11</p>
+    <img id="obrazek" src="KIT.webp" alt="KIT">
+
+    <input type="number" id="vstup" value="15"> <!--value je zde docasne, pak se sbira pomoci eventu pri odeslani formulare-->
+    
+
+    <script>
+        //1.getAttribute - ziska hodnotu atributu
+        let ziskanahodnota = document.getElementById("obrazek").getAttribute("src");
+        console.log(ziskanahodnota);
+
+        //2.setAttribute - nastavi hodnotu stributu
+        // neni povinne, ale vetsinou se pred zmenou hodnoty obsah prvku uklada do promenne
+        let obrazek1 = document.getElementById("obrazek"); // - v promenne je nyni ulozen cely objekt obrazku, se vsemi jeho vlastostmi
+        obrazek1.setAttribute("src", "OIP.webp"); //(atribut, hodnota atributu)
+
+
+        //3.removeAttribute - odstrani atribut z prvku
+        obrazek1.removeAttribute("alt");
+
+        //4. value - ziska ciselni hodnotu z html prvku - dynamicky prvek
+        let cislo = document.getElementById("cislo").value;
+        console.log(cislo);
+
+        document.getElementById("cislo").innerText = cislo;
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventy v DOM</title>
+</head>
+<body>
+    <!--Eventy slouzi k intrekci uzivatele se strankou-->
+    <!--Ucelem iventu je temer vzdy spustit nejakou funkci-->
+    <!-- onclick - pri kliknuti mysi-->
+    <button onclick="spustit()">Stiskni me</button>
+
+    <!--Eventy muzeme opakovat-->
+    <h1 onclick="spustit()">Kluknuti na me</h1>
+
+    <!--jeden prvek html muze byt soucasti vice eventu-->
+    <!--Eventy lze spustit - 1-->
+    <!--
+    onmouseover - prejeti kurzorem
+    onmouseout - odjeti z prvku kurzorem
+    -->
+
+    <!--ruzne eventy nohou spoustet stejnou funkci-->
+    
+    
+    <img src="KIT.webp" alt="kocka" onmouseover="zmenit()" onmouseout="vratit()">
+    <h2 onmouseover="spustit()">prejed me</h2>
+    <script>
+        function spustit(){
+            //tato funkce je volana tlacitkem s eventem onClick
+
+            document.body.style.backgroundColor = "#c1c1c1";
+        }
+        function zmenit(){
+            document.getElementById("obrazek").setAttribute("src", "OIP.webp");
+        }
+            function vratit(){
+            document.getElementById("obrazek").setAttribute("src", "KIT.webp");
+        }
+        
+        //pouziti addEventListener
+        // aby spravne fungoval musi byt napojeny na nejaky html prvek - body, tlacitko, div a dalsi
+        // eventy zde zapisuji stejne jako u ht¨ml prvku, ale vynechava se text on...
+        const obrazek1 = document.getElementById("obrazek");
+        addEventListener("click", function(){
+            alert("kliknuti na obrazek!"); //popup okno s vystrahaou
+                document.body.style.backgroundColor = "white";
+        })
+    </script>
+</body>
+</html>
