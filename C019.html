@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C019</title>
+</head>
+<body>
+    <input type="text" id="vstupni_data">
+    <button id="spustit" >Ulozit do seznamu</button>
+    <ol id="seznam">
+
+    </ol>
+
+    <script>
+        const talcitko = document.getElementById("spustit");
+        talcitko.addEventListener("click", function(){
+            let promenna = document.getElementById("vstupni_data").value;
+            document.getElementById("seznam").innerHTML += "<li>" + promenna + "</li>";
+        });
+
+    </script>
+</body>
+</html>
