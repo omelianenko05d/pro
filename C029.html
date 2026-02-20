@@ -1,0 +1,39 @@
+<!--
+Vytvorte 4 bloky s rozmery 200px na 200px a barvou pozadi #ffaa44;
+
+Pomoci cyklu for nechte zmenit barvu pozadi u 4 bloku s tridou barvicky
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .blok{
+            width: 200px;
+            height: 200px;
+            background-color: #ffaa44;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="blok"></div>
+    <div class="blok"></div>
+    <div class="blok"></div>
+    <div class="blok"></div>
+    
+    <button onclick="obarvi()">Obarvi</button>
+    <script>
+        let kolekce = document.querySelectorAll(".blok");
+
+            function obarvi(){
+            kolekce.forEach(function(prvek){
+            prvek.style.color = "red";
+            })
+        }
+    </script>
+
+</body>
+</html>
